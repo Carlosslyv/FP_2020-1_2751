@@ -1,22 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 int main(int argc, char*argv[]){
-	
-	//se declaran variables
-	double x=0;
-	
-	//aplicamos for 
-	for(int i=1; i<argc; i++)
-	{
-		double y=atof(argv[i]);
-		x=y+x;
+	//se declara lista
+	//declaramos la suma
+	int lista[argc],suma=0;
+	//declaramos promedio
+	float promedio;
+	//este for es para agregar argv dentro de la lista 
+	for(int i=1;i<argc;i++){
+		lista[i]=atoi(argv[i]);
+    }
+    //for se utliza para sumar los numeros dentro de la lista 
+	for(int i=1;i<argc;i++){
+		suma=suma+lista[i];
 	}
-	
-	//aplicamos la formula para sacar el promedio
-	double promedio=x/(argc-1);
-	printf("%.2lf\n", promedio);
-	
-	return 0;
+	//en el promedio se divide la suma entre el argc-1
+	promedio=(float)suma/(argc-1);
+	pritnf("%f\n", promedio);	
+	return 0;		
 }
 
