@@ -1,5 +1,6 @@
 #include <stdio.h>
-int main (int argc, char const *argv[])
+#include <stdlib.h>
+int main(int argc, char const*argv[])
 {
 	printf("%s\n", argv[1]);
 	
