@@ -1,14 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
-
-int main( int argc, char*argv[])// son parametros que sirven para meter una base y su exponente a aumentar
-{
-	int a= atoi(argv[1]);
-	//esto nos sirve para la base
-	int b= atoi(argv[2]);
-	//esto nos sirve para el exponente a aumentar
-	int c= pow(a,b);
-	printf("%i\n", c);
+int main(int argc, char*argv[]){
+	//declaramos las variables que ocuparemos
+	int a;
+	int b;
+	int c=1;
+	a= atof(argv[1]);
+	b= atof(argv[2]);
+	//ahora decidimos donde guardara 
+	for(int i=0; i<b; i++){
+		//decimos donde se guardara y por cual se multiplicara
+		c=c*a;
+	}
+	//se imprimen los resultados
+	printf("%.2d\n", c);
 	return 0;
 }
