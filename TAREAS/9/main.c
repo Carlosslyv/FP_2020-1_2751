@@ -1,21 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
 int main(int argc, char*argv[]){
-	//declarando las variables de entrada
-	int t, suma;
-	//sdeclaramos las variables que utilizaremos 
-	t=atoi(argv[1]);
-	suma=0
-	//ponemos lo que se quiere realizar
-	while (t!=0){
-		//la funcion que queremos realizar empieza su proceso
-		suma= suma+(t%10);
-		//se hace la suma 
-		t=(t/10);
-		//aqui se hace la division 
+	int numero;
+	numero=strlen (argv[1]);
+	//utilizamos strlen para saber cuantos digitos tiene 
+	char argv[numero];
+	int resultado=0;
+	//empieza con el numero neutro aditivo 
+	int digitos[numero];
+	for (int i=0; i<numero; i++){
+		//aqui se suman los caracteres 
+		argc[i]= argv[1][i];
+		digitos[i]=atoi (&argc[i]);
+		resultado=resultado+digitos[i];
+		//cada una se suma por separado
 	}
-	printf("%i\n", suma);
-	//se muestran los resultados 
+	printf("%i\n", resultado);
 	return 0;
 }
 
